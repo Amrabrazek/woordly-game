@@ -58,12 +58,12 @@
     transition: transform 0.3s;
 }
 
-/* .btnx:hover, .btny:hover {
+.btnx:hover, .btny:hover {
 
     transform: translateY(-6px);
     transition: transform 0.3s;
 
-} */
+}
 .enter, .backspace {
     width: 4.5rem;
 }
