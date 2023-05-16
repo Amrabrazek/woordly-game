@@ -10,6 +10,17 @@
     
 </head>
 <body class="bg-light w-100 h-100">
+
+    <div class="mynavbar">
+        <div class="menu"><img src="../media/menu.svg" alt="SVG image"></div>
+        <div class="logo">Wordle</div>
+        <div class="option">
+            <div class="opt optwo"><img src="../media/help-circle-outline.svg" alt="SVG image"></div>
+            <div class="opt opthree"><img src="../media/poll.svg" alt="SVG image"></div>
+            <div class="opt opone"><img src="../media/cog.svg" alt="SVG image"></div>
+        </div>
+    </div>
+
     <div class="grid-container flex-wrap d-flex m-auto">
         <div class="input-text row1" id="one-one" type="text" name="one-one"></div>
         <div class="input-text row1" id="one-two" type="text" name="one-two"></div>
@@ -121,7 +132,7 @@
         <div class="row-contaier w-100 d-flex justify-content-around my-2">
             <div class="first-row row row-cols-10 gx-1 flex-nowrap d-flex">
                 <div class="char col ">
-                    <button type="button" id="A" class="btny" disabled>Enter</button>
+                    <button type="button" id="A" class="btnx enter" disabled>Enter</button>
                 </div>
                 <div class="char col ">
                     <button type="button" id="S" class="btnx" disabled>Z</button>
@@ -145,15 +156,13 @@
                     <button type="button" id="K" class="btnx" disabled>M</button>
                 </div>
                 <div class="char col ">
-                    <button type="button" id="L" class="btny" disabled>xx</button>
+                    <button type="button" id="L" class="btnx backspace" disabled>xx</button>
                 </div>
             </div>
         </div>
     </div>
     
-    
-
-
+    <script src="../JS/script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 </body>
 </html>
