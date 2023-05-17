@@ -42,11 +42,11 @@ gridcolumn = ["one", "two", "three", "four", "five", "six"]
 gridrow = ["one", "two", "three", "four", "five"]
 
 function createrow (numberofelements, rownumber) {
-    gridrow = ["one", "two", "three", "four", "five", "six", "seven"]
+    let gridrow = ["one", "two", "three", "four", "five", "six", "seven"]
 
     for (let i = 0; i < numberofelements; i++) {
         square = document.createElement("div")
-        square.classList.add("input-text", `row${i}`)
+        square.classList.add("input-text", `row${rownumber}`)
         square.id=`${rownumber}-${gridrow[i]}`
         square.type="text"
         square.name=`${rownumber}-${gridrow[i]}`
@@ -57,9 +57,9 @@ function createrow (numberofelements, rownumber) {
 
 
 function creategrid (numberofrows, numberofcolumns) {
-    gridcolumn = ["one", "two", "three", "four", "five", "six", "seven", "eight"]
+    let gridcolumn = ["one", "two", "three", "four", "five", "six", "seven", "eight"]
     for (let i = 0; i < numberofrows; i++) {
-        createrow  (numberofcolumns, gridrow[i])
+        createrow  (numberofcolumns, gridcolumn[i])
     }
 }
 creategrid(6,5)
