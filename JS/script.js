@@ -34,3 +34,39 @@ function addkey (key, row) {
     row = document.querySelector(`.${row}`)
     row.appendChild(buttuncont)
 }
+
+
+{/* <div class="input-text row1" id="one-one" type="text" name="one-one"></div> */}
+
+gridcolumn = ["one", "two", "three", "four", "five", "six"]
+gridrow = ["one", "two", "three", "four", "five"]
+
+function createrow (numberofelements, rownumber) {
+    gridrow = ["one", "two", "three", "four", "five", "six", "seven"]
+
+    for (let i = 0; i < numberofelements; i++) {
+        square = document.createElement("div")
+        square.classList.add("input-text", `row${i}`)
+        square.id=`${rownumber}-${gridrow[i]}`
+        square.type="text"
+        square.name=`${rownumber}-${gridrow[i]}`
+        container = document.querySelector(".grid-container")
+        container.appendChild(square)
+      }
+}
+
+
+function creategrid (numberofrows, numberofcolumns) {
+    gridcolumn = ["one", "two", "three", "four", "five", "six", "seven", "eight"]
+    for (let i = 0; i < numberofrows; i++) {
+        createrow  (numberofcolumns, gridrow[i])
+    }
+}
+creategrid(6,5)
+
+// square = document.createElement("div")
+// square.classList.add("input-text", "row1")
+
+
+// grid-container = 
+
