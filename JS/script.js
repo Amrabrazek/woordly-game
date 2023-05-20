@@ -73,7 +73,12 @@ option.addEventListener("click",() => {
     console.log("entered")
     container = document.querySelector(".optionspagecontainer")
     style = window.getComputedStyle(container)
-    container.style.display = "block"
+    // container.style.width = "auto"
+    // container.style.height = "auto"
+    // container.style.display = "block"
+    container.style.left = "calc((100% - 450px) / 2)"
+    // container.style.transform = 'translateX(160px)';
+    container.style.transition = '0.2s 0.3s';
     console.log(style.display)
 
     
@@ -84,5 +89,15 @@ closesign = document.querySelector(".closesign")
 
 closesign.addEventListener("click", () => {
     container = document.querySelector(".optionspagecontainer")
-    container.style.display = "none"
+    container.style.left = "150%"
+    container.style.transition = '0.2s 0.3s';
+    // container.style.display = "none"
+})
+
+opthree = document.querySelector(".opthree")
+
+opthree.addEventListener("click", () => {
+    bodycontainer = document.querySelector(".bodycontainer")
+    bodycontainer.classList.add("bg-dark")
+    
 })

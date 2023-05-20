@@ -3,16 +3,19 @@
     height: 4rem;
     color: aliceblue;
 } */
+
 :root {
     --font-family:font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
 
 *{
     box-sizing:border-box;
     font-family: var(--font-family);
 }
 
-.mynavbar {
+
+.mynavbar{
     display: flex;
     flex-wrap: nowrap;
     border-bottom: 1px solid black;
@@ -21,8 +24,6 @@
     position: sticky;
     align-items: center;
     justify-content: space-between;
-
-
 }
 
 .option, .menu{
@@ -32,10 +33,12 @@
     /* width: 80px; */
 
 }
+
 .opt, .menu{
     display: flex;
     height: 40px;
     padding: 5px;
+    cursor: pointer;
 }
 
 
@@ -101,13 +104,10 @@
     font-size: large;
     font-weight: bold;
     text-align: center;
-    border: 1px solid rgb(135, 138, 140);
-    border-radius: 5px;
+    border: 2px solid rgb(135, 138, 140);
+    border-radius: 3px;
     /* background-color: rgb(164, 189, 187); */
-
 }
-
-
 
 .selectedbutnotthere{
     background-color: gray;
@@ -123,17 +123,18 @@
 
 
 .optionspagecontainer{
-    display: none;
+    /* width: 0px;
+    height: 0px; */
     position: fixed;
     top: 15vh;
-    left: calc((100% - 450px) / 2);
+    left: 150%;
+    /* left: calc((100% - 450px) / 2); */
     /* display: none; */
     /* border-radius: 2rem; */
 }
 
 
 .optionspage {
-    
     display: flex;
     flex-direction: column;
     border: 2px solid black;
@@ -157,8 +158,8 @@
 }
 
 .title{
-    font-family: 'Times New Roman', Times, serif;
-    font-weight: bolder;
+    /* font-family: 'Times New Roman', Times, serif; */
+    font-weight:900;
     height: fit-content;
     
 }
@@ -174,7 +175,6 @@
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bolder;
     color: black;
-
 }
 
 
