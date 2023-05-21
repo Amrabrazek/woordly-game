@@ -70,7 +70,7 @@ creategrid(6,5)
 option = document.querySelector(".optwo")
 
 option.addEventListener("click",() => {
-    console.log("entered")
+    // console.log("entered")
     container = document.querySelector(".optionspagecontainer")
     style = window.getComputedStyle(container)
     // container.style.width = "auto"
@@ -79,7 +79,7 @@ option.addEventListener("click",() => {
     container.style.left = "calc((100% - 450px) / 2)"
     // container.style.transform = 'translateX(160px)';
     container.style.transition = '0.2s 0.3s';
-    console.log(style.display)
+    // console.log(style.display)
 
     
 } )
@@ -98,6 +98,37 @@ opthree = document.querySelector(".opthree")
 
 opthree.addEventListener("click", () => {
     bodycontainer = document.querySelector(".bodycontainer")
-    bodycontainer.classList.add("bg-dark")
+    var classlis = Array.from(bodycontainer.classList)
+
+    console.log(classlis)
+    if (classlis.includes('bg-light'))
+    {
+        console.log("test")
+        bodycontainer.classList.add("bg-dark")
+        bodycontainer.classList.remove("bg-light")
+    }
+
+    // if (document.body.style.backgroundColor === ""){
+    //     console.log(document.body.style.backgroundColor)
+    //     document.body.style.backgroundColor = "black"
+    // }
+
+    else
+    {
+        bodycontainer.classList.add("bg-light")
+        bodycontainer.classList.remove("bg-dark")
+    }
+    
+})
+
+
+document.addEventListener("click", (e) => {
+    if ( (e.target.getAttribute("class") !== "optionspagecontainer") && e.target.getAttribute("class") !== "optwo"  )
+    {
+        container = document.querySelector(".optionspagecontainer")
+        console.log(container)
+        container.style.left = "150%"
+        container.style.transition = '0.2s 0.3s';
+    }
     
 })
