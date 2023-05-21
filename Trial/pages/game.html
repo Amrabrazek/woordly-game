@@ -5,14 +5,31 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wordle</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../styles/canvas.css">
+    <link rel="stylesheet" href="../styles/game.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+    <script src="https://kit.fontawesome.com/fe57cc5d0b.js" crossorigin="anonymous"></script>
+
+    <script defer src="../scripts/canvas.js" type="module"></script>
+    <script defer src="../scripts/game.js" type="module"></script>
+
 </head>
 <body>
-    <h1>Wordle</h1>
+    <div data-nav>
+        <input type="button" data-cancelBtn value="Exit">
+        <h1>Wordle</h1>
+    </div>
     <!-- Game Board -->
-    <div id="game-board"></div>
+    <div id="display-board">
+        <canvas id="canvas" width="250" height="300"></canvas>
+        <div id="game-board"></div>
+        <div data-gameStatus>
+            <label data-gameResult></label><label data-answer></label>
+            <input type="button" data-playBtn value="Play again">
+        </div>
+    </div>
     <!-- Game Board ends here -->
     <!-- Keyboard starts here -->
     <div id="keyboard-cont">
@@ -63,6 +80,9 @@
         crossorigin="anonymous">
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
-    <script src="./script.js" type="module"></script>
+    <audio src="../sounds/btn_click.mp3" id="btnClickedSound"></audio>
+    <audio src="../sounds/hoverSound.mp3 " id="hoverSound"></audio>
+    <audio src="../sounds/gameoverSound.mp3" id="gameoverSound"></audio>
+    <audio src="../sounds/flippingSound.mp3" id="flippingSound"></audio>
 </body>
 </html>

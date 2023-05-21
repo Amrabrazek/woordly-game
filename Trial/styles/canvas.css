@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   background-color: #333;
   color: #fff;
   display: flex;
@@ -12,17 +12,19 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   min-height: 100vh;
   margin: 0px;
-}
+} */
 
 #canvas {
   background: #f0f0f0;
   border-radius: 5px;
+  margin-left: 100px;
+  min-height: 300px;
 }
 
-.button {
+/* .button {
   background-color: red;
   border-radius: 5px;
   padding: 10px 20px;
   color: white;
   border: none;
-}
+} */

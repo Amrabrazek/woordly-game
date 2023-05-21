@@ -1,0 +1,198 @@
+
+
+body{
+    background-color: var(--default);
+}
+:root {
+    --default: #121213;
+    --empty: #3a3a3c;
+    --wrong: #b59f3b;
+    --right: #538d4e;
+    --keyboard: #757575;
+}
+h1{
+    text-align: center;
+    color: white;
+    font-size: 32px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid rgba(95, 93, 93, 0.611);
+    font-family: btnFonts;
+    font-weight: 700px;
+}
+
+#display-board{
+    display: flex;
+    align-items: space-between;
+    flex-wrap: wrap;
+    gap: 5px;
+    position: relative;
+}
+
+#game-board{
+    margin-left: 300px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.row{
+    display: flex;
+}
+.box{
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: uppercase;
+    border: 2px solid var(--empty);
+    margin: 3px;
+    font-size: 1rem;
+    font-weight: 700;
+    box-sizing: border-box;
+    font-family: guessesFont;
+    height: 3rem;
+    width: 3rem;
+    transition-duration: 0.5s;
+}
+
+@keyframes animateBorder {
+    to{
+        outline-style: solid;
+        outline-color: #737376;
+        outline-width: medium;
+    }
+}
+
+@keyframes clickedLetter {
+    to{
+        /* color: var(--keyboard);
+        background-color:white; */
+        color: black;
+        background-color:var(--empty);
+    }
+}
+
+@keyframes flip {
+    from {
+        /* transform: 'rotate(0deg)';
+        transition-duration: 0s; */
+    }
+    to {
+        transform-origin: 'rotate(20deg)';
+        transition-duration: 1s;
+    }
+}
+
+
+#keyboard-cont{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    /* margin: 1rem; */
+}
+
+#keyboard-cont div{
+    display: flex;
+}
+
+.second-row{
+    margin: 0.5rem 0
+}
+
+.keyboard-button {
+    color: white;
+    background-color:var(--keyboard) ;
+    font-size: 1.25rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    margin: 0 2px;
+    cursor: pointer;
+    text-transform: uppercase;
+    border-radius: 4px;
+    border: 0;
+    margin: 0 6px 0 0;
+    height: 58px;
+    min-width: 40px;
+}
+.keyboard-button:hover{
+    transform: translateY(-6px);
+    transition: transform 0.1s;
+}
+
+
+
+
+
+[data-gameStatus]{
+    width: 500px;
+    height: 300px;
+    margin-left: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    flex-wrap: wrap;
+}
+
+[data-gameResult], [data-answer]{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 2rem;
+}   
+
+
+@font-face {
+    font-family: guessesFont;
+    src: url('../fonts/Cantarell-Regular.ttf');
+}
+
+@font-face {
+    font-family: btnFonts;
+    src: url('../fonts/ChunkFive-Regular.otf');
+}
+
+
+
+
+[data-playBtn]{
+    margin: 20px;
+    box-sizing: border-box;
+    border: 5px solid #3a3a3c;
+    outline-color: #3a3a3c;
+    border-radius: 7px;
+    height: 70px;
+    width: 200px;
+    font-size: 2rem;
+    background-color: #757575;
+    font-family: btnFonts;
+    visibility: hidden;
+}
+
+[data-playBtn]:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+
+[data-nav]{
+    position: relative;
+}
+
+[data-cancelBtn]{
+    position: absolute;
+    right: 0;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(190 18 60);;
+    font-size: 1.2rem;
+    box-sizing: border-box;
+    border: 2px     solid #3a3a3c;
+    outline-color: #3a3a3c;
+    border-radius: 7px;
+    font-family: btnFonts;
+}
+[data-cancelBtn]:hover{
+    cursor: pointer;
+    opacity: 0.7;
+}
