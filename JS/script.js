@@ -11,9 +11,7 @@ addGlobalEventListener('click', ".btnx", e => {
     console.log(value)
 })
 
-{/* <div class="char col ">
-                    <button type="button" id="Q" class="btnx" >Q</button>
-                </div> */}
+
 
 
 keyboardfirstrow=["Q","W","E","R","T",'Y','U','I','O','P']
@@ -21,7 +19,7 @@ keyboardfirstrow.forEach(element => addkey(element, "first-row"));
 keyboardsecondrow=['A','S','D','F','G','H','J','K','L']
 keyboardsecondrow.forEach(element => addkey(element, "second-row"));
 
-function addkey (key, row) {
+function addkey (key, row) {addEventListener
     buttuncont = document.createElement('div')
     buttuncont.classList.add('char', 'col')
     butt = document.createElement('button')
@@ -30,7 +28,6 @@ function addkey (key, row) {
     butt.type = 'button'
     butt.innerText = key
     buttuncont.appendChild(butt)
-
     row = document.querySelector(`.${row}`)
     row.appendChild(buttuncont)
 }
@@ -70,3 +67,37 @@ creategrid(6,5)
 
 // grid-container = 
 
+option = document.querySelector(".optwo")
+
+option.addEventListener("click",() => {
+    console.log("entered")
+    container = document.querySelector(".optionspagecontainer")
+    style = window.getComputedStyle(container)
+    // container.style.width = "auto"
+    // container.style.height = "auto"
+    // container.style.display = "block"
+    container.style.left = "calc((100% - 450px) / 2)"
+    // container.style.transform = 'translateX(160px)';
+    container.style.transition = '0.2s 0.3s';
+    console.log(style.display)
+
+    
+} )
+
+
+closesign = document.querySelector(".closesign")
+
+closesign.addEventListener("click", () => {
+    container = document.querySelector(".optionspagecontainer")
+    container.style.left = "150%"
+    container.style.transition = '0.2s 0.3s';
+    // container.style.display = "none"
+})
+
+opthree = document.querySelector(".opthree")
+
+opthree.addEventListener("click", () => {
+    bodycontainer = document.querySelector(".bodycontainer")
+    bodycontainer.classList.add("bg-dark")
+    
+})

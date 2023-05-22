@@ -230,7 +230,7 @@ function check(){
             //displaying message when player loses
             setTimeout(() => {
                 gameover.play()
-            }, 1500);
+            }, 1700);
             result.innerHTML = 'You have ran of out guesses! <br> The word is:'
             answer.innerHTML = `${rightGuess}`
             result.style.color = 'rgb(190 18 60)'
