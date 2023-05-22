@@ -69,7 +69,6 @@ function createLetterIDs(){
 // Main function
 document.addEventListener("keyup",(e) => {
 
-    
     if(guessesRemaning === 0){
         return;
     }
@@ -214,6 +213,7 @@ function check(){
         result.innerHTML = `You Got it right!`
         result.style.color = 'Green'
         playAgainBtn.style.visibility = 'visible'
+        displayResult()
         // alert("You Guessed right!")
         guessesRemaning = 0
         return
@@ -232,10 +232,11 @@ function check(){
                 gameover.play()
             }, 1700);
             result.innerHTML = 'You have ran of out guesses! <br> The word is:'
-            answer.innerHTML = `${rightGuess}`
+            answer.innerHTML = `'${rightGuess}'`
             result.style.color = 'rgb(190 18 60)'
             answer.style.color = '#538d4e'
             playAgainBtn.style.visibility = 'visible'
+            displayResult()
             // alert("You've run out of guesses! Game over!")
             // alert(`The right word was : ${rightGuess}`)
         }
@@ -252,5 +253,77 @@ function keyboardColor(letter, boxColor){
 
 // Calling inital board function
 initBoard()
+// displayResult()
 createLetterIDs()
 // ****************************
+
+
+function displayResult(){
+    let container = document.querySelector(".StatusGame")
+
+    container.style.left = "calc((100% - 450px) / 2)"
+    container.style.transition = '0.1s 0.1s';
+}
+
+
+let option = document.querySelector(".optwo")
+
+option.addEventListener("click",() => {
+    // console.log("test");
+    let container = document.querySelector(".optionspagecontainer")
+
+    container.style.left = "calc((100% - 450px) / 2)"
+    container.style.transition = '0.1s 0.1s';
+
+    
+} )
+
+
+let closesign = document.querySelector(".closesign")
+
+closesign.addEventListener("click", () => {
+    let container = document.querySelector(".optionspagecontainer")
+    container.style.left = "150%"
+    container.style.transition = '0.2s 0.3s';
+    // container.style.display = "none"
+})
+document.querySelector('.closeState').addEventListener("click", () => {
+    let container = document.querySelector(".StatusGame")
+    container.style.left = "150%"
+    container.style.transition = '0.2s 0.3s';
+    // container.style.display = "none"
+})
+
+document.addEventListener("click", (e) => {
+    if ( (e.target.getAttribute("class") !== "optionspagecontainer") && e.target.getAttribute("class") !== "optwo"  )
+    {
+        let container = document.querySelector(".optionspagecontainer")
+        console.log(container)
+        container.style.left = "150%"
+        container.style.transition = '0.2s 0.3s';
+    }
+    
+})
+
+
+let opthree = document.querySelector(".opthree")
+opthree.addEventListener("click", () => {
+    let stylelink = document.querySelector("#style")
+    let arr = stylelink.href.split("/")
+    let len = arr.length
+    let hrefx = arr[len-1]
+
+    if (hrefx == "game.css"){
+        stylelink.href = "../styles/gamecopy.css"
+    }
+    else{
+        stylelink.href = "../styles/game.css"
+    }
+    
+})
+
+let retry = document.querySelector(".retry")
+
+retry.addEventListener("click", () => {
+    location.reload()
+})

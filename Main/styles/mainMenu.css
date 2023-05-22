@@ -11,8 +11,8 @@ body{
 }
 
 .box{
-    width: 70px;
-    height: 70px;
+    width: 100px;
+    height: 100px;
     border: 0px;
     border-radius: 5px;
     margin: 5px;

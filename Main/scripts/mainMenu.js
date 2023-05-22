@@ -9,7 +9,7 @@ onload = () => {
 
 function createBackground()
 {
-    for (let i = 0; i < 480; i++) {
+    for (let i = 0; i < 600; i++) {
         let box = document.createElement('div')
         box.className = 'box'
         ind = (++ind) % (colors.length )

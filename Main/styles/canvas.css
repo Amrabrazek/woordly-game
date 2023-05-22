@@ -15,9 +15,9 @@
 } */
 
 #canvas {
-  background: #f0f0f0;
+  background: #d8d1d1;
   border-radius: 5px;
-  margin-left: 100px;
+  /* margin-left: 100px; */
   min-height: 300px;
 }
 
@@ -28,3 +28,9 @@
   color: white;
   border: none;
 } */
+
+
+[data-gameStatus]{
+  margin: auto;
+  
+  }
